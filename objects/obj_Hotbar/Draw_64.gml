@@ -26,7 +26,7 @@ for (var i = 0; i < 20; i++) {
 	}
 	offsetX += 96
 	if (offsetX + size > 1920) {
-		offsetX = 2
+		offsetX = 1
 		offsetY += 96
 	}
 }
@@ -68,7 +68,7 @@ for (var i = 0; i < 20; i++) {
 	}
 	offsetX += 96
 	if (offsetX + size > 1920) {
-		offsetX = 2
+		offsetX = 1
 		offsetY += 96
 	}
 }

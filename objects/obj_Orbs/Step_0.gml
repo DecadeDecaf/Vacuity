@@ -25,9 +25,8 @@ if (dis < 10 && image_xscale <= 0) {
 	var slot = ds_list_find_index(obj_Player.Orbs, Name)
 	if (slot == -1) {
 		ds_list_add(obj_Player.Orbs, Name)
+		ds_list_add(obj_Player.Backdrops, Name)
 	}
-	var lay = layer_get_id(Name)
-	layer_set_visible(lay, true)
 	var steam = (ds_list_find_index(obj_Player.Orbs, "Steam") != -1)
 	var wind = (ds_list_find_index(obj_Player.Orbs, "Wind") != -1)
 	var clay = (ds_list_find_index(obj_Player.Orbs, "Clay") != -1)
@@ -39,25 +38,21 @@ if (dis < 10 && image_xscale <= 0) {
 	var ash = (ds_list_find_index(obj_Player.Orbs, "Ash") != -1)
 	var emptiness = (ds_list_find_index(obj_Player.Orbs, "Emptiness") != -1)
 	if (steam && !wind) {
-		layer_set_visible(lay, true)
 		if (!instance_exists(obj_WindOrb)) {
 			instance_create_depth(1600, 1024, depth, obj_WindOrb)
 		}
 	}
 	if (clay && bricks && glass && !grav) {
-		var lay = layer_get_id("Bridge")
-		layer_set_visible(lay, true)
+		ds_list_add(obj_Player.Backdrops, "Bridge")
 		if (!instance_exists(obj_GravityOrb)) {
 			instance_create_depth(3200, 320, depth, obj_GravityOrb)
 		}
 	}
 	if (metal && energy) {
-		var lay = layer_get_id("Dam")
-		layer_set_visible(lay, true)
+		ds_list_add(obj_Player.Backdrops, "Dam")
 	}
 	if (ash && wind) {
-		var lay = layer_get_id("Black")
-		layer_set_visible(lay, true)
+		ds_list_add(obj_Player.Backdrops, "Black")
 	}
 	if (metal && energy && ash && wind && !emptiness) {
 		if (!instance_exists(obj_EmptinessOrb)) {

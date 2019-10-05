@@ -885,6 +885,14 @@
                 "resourcePath": "views\\fc8dc8a4-c585-4570-99d4-97aaae64b9d1.yy",
                 "resourceType": "GMFolder"
             }
+        },
+        {
+            "Key": "ff366119-9fe1-42d6-989b-e0332f7e2a36",
+            "Value": {
+                "id": "1d0a3323-fd67-4a94-88e4-76555a4ccdd7",
+                "resourcePath": "scripts\\scr_HideBackground\\scr_HideBackground.yy",
+                "resourceType": "GMScript"
+            }
         }
     ],
     "script_order": [
@@ -895,7 +903,8 @@
         "2df35a0d-b006-484e-af92-647f17b6fc92",
         "5c44c58f-0576-4dc9-8838-87518151967c",
         "51133aca-cc68-4405-bf74-84ac9c2d9cd3",
-        "52b6636a-3a01-4455-a26c-460e326604c7"
+        "52b6636a-3a01-4455-a26c-460e326604c7",
+        "ff366119-9fe1-42d6-989b-e0332f7e2a36"
     ],
     "tutorial": ""
 }

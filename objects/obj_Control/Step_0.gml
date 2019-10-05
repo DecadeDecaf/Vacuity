@@ -33,3 +33,10 @@ if (Shake) {
 		Shake = false
 	}
 }
+
+for (var i = 0; i < ds_list_size(obj_Player.Backdrops); i++) {
+	var orb = ds_list_find_value(obj_Player.Backdrops, i)
+	var lay = layer_get_id(orb)
+	var back = layer_background_get_id(lay)
+	layer_background_alpha(back, layer_background_get_alpha(back) + 0.05)
+}
