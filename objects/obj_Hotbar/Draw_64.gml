@@ -52,16 +52,13 @@ for (var i = 0; i < 20; i++) {
 			var click = mouse_check_button_pressed(mb_left)
 			if (click) {
 				if (global.Orb != "") {
-					scr_Combine(orb, global.Orb)
-				} else {
-					if (global.Talking) {
-						with (obj_Dialogue) {
-							scr_StopDialogue()
-							instance_destroy()
-						}
+					if (orb == global.Orb) {
+						scr_StopDialogue()
+					} else {
+						scr_Combine(orb, global.Orb)
 					}
+				} else {
 					global.Orb = orb
-					scr_StartDialogue(orb, "This is the orb of " + string_lower(orb) + ". What should you combine it with?")
 				}
 			}
 		}
