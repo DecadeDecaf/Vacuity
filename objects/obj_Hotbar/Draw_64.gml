@@ -56,6 +56,7 @@ for (var i = 0; i < 20; i++) {
 						scr_StopDialogue()
 					} else {
 						scr_Combine(orb, global.Orb)
+						global.Orb = ""
 					}
 				} else {
 					global.Orb = orb
