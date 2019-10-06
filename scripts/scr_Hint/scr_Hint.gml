@@ -1,4 +1,6 @@
-if (scr_Hintable("Earth", "Water", "Mud")) {
+if (instance_exists(obj_Orbs)) {
+	scr_StartDialogue("Hint", "Try exploring the world around you.")
+} else if (scr_Hintable("Earth", "Water", "Mud")) {
 	exit
 } else if (scr_Hintable("Earth", "Air", "Dust")) {
 	exit
