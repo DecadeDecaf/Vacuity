@@ -27,38 +27,7 @@ if (dis < 10 && image_xscale <= 0) {
 		ds_list_add(obj_Player.Orbs, Name)
 		ds_list_add(obj_Player.Backdrops, Name)
 	}
-	var steam = (ds_list_find_index(obj_Player.Orbs, "Steam") != -1)
-	var wind = (ds_list_find_index(obj_Player.Orbs, "Wind") != -1)
-	var clay = (ds_list_find_index(obj_Player.Orbs, "Clay") != -1)
-	var bricks = (ds_list_find_index(obj_Player.Orbs, "Bricks") != -1)
-	var glass = (ds_list_find_index(obj_Player.Orbs, "Glass") != -1)
-	var grav = (ds_list_find_index(obj_Player.Orbs, "Gravity") != -1)
-	var metal = (ds_list_find_index(obj_Player.Orbs, "Metal") != -1)
-	var energy = (ds_list_find_index(obj_Player.Orbs, "Energy") != -1)
-	var ash = (ds_list_find_index(obj_Player.Orbs, "Ash") != -1)
-	var emptiness = (ds_list_find_index(obj_Player.Orbs, "Emptiness") != -1)
-	if (steam && !wind) {
-		if (!instance_exists(obj_WindOrb)) {
-			instance_create_depth(1600, 1024, depth, obj_WindOrb)
-		}
-	}
-	if (clay && bricks && glass && !grav) {
-		ds_list_add(obj_Player.Backdrops, "Bridge")
-		if (!instance_exists(obj_GravityOrb)) {
-			instance_create_depth(3200, 320, depth, obj_GravityOrb)
-		}
-	}
-	if (metal && energy) {
-		ds_list_add(obj_Player.Backdrops, "Dam")
-	}
-	if (ash && wind) {
-		ds_list_add(obj_Player.Backdrops, "Black")
-	}
-	if (metal && energy && ash && wind && !emptiness) {
-		if (!instance_exists(obj_EmptinessOrb)) {
-			instance_create_depth(128, 880, depth, obj_EmptinessOrb)
-		}
-	}
+	scr_SpecialOrbs()
 	if (Name == "You") {
 		obj_Control.Shake = true
 	}

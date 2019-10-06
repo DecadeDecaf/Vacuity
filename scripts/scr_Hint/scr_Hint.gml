@@ -24,6 +24,12 @@ if (instance_exists(obj_Orbs)) {
 	exit
 } else if (scr_Hintable("Fire", "Clay", "Bricks")) {
 	exit
+} else if (scr_Hintable("Metal", "Energy", "Dam")) {
+	exit
+} else if (scr_Hintable("Bricks", "Glass", "Bridge")) {
+	exit
+} else if (scr_Hintable("Ash", "Wind", "Black")) {
+	exit
 } else if (scr_Hintable("Gravity", "Emptiness", "You")) {
 	exit
 } else {
