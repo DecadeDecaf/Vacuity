@@ -7,21 +7,16 @@ var size = 92
 
 for (var i = 0; i < 20; i++) {
 	draw_set_color(c_white)
-	draw_set_alpha(0.5)
+	draw_set_alpha(0.25)
 	draw_rectangle(offsetX, offsetY, offsetX + size, offsetY + size, false)
-	draw_set_alpha(1)
 	var orb = ds_list_find_value(obj_Player.Orbs, i)
 	if (!is_undefined(orb)) {
-		var sprite = asset_get_index("spr_" + orb + "Orb")
+		draw_set_alpha(0.5)
 		if (orb == global.Orb) {
-			var dir = 0
-			gpu_set_fog(true, c_white, 0, 0)
-			repeat (8) {
-				draw_sprite(sprite, 0, offsetX + (size / 2) + lengthdir_x(4, dir), offsetY + (size / 2) + lengthdir_y(4, dir))
-				dir += 45
-			}
-			gpu_set_fog(false, c_black, 0, 0)
+			draw_rectangle(offsetX, offsetY, offsetX + size, offsetY + size, false)
 		}
+		draw_set_alpha(1)
+		var sprite = asset_get_index("spr_" + orb + "Orb")
 		draw_sprite(sprite, 0, offsetX + (size / 2), offsetY + (size / 2))
 	}
 	offsetX += 96
