@@ -91,7 +91,7 @@ with (obj_Dialogue) {
 if (scr_Combinable(orbA, orbB, "Ash", "Wind")) {
 	if (ds_list_find_index(obj_Player.Backdrops, "Black") == -1) {
 		ds_list_add(obj_Player.Backdrops, "Black")
-		scr_StartDialogue("Black", "You blow the ash, creating a streak of black.")
+		scr_StartDialogue("Black", "You blew the ash, creating a streak of black.")
 	} else {
 		scr_StartDialogue("Black", "You already blew the ash.")
 	}
@@ -102,7 +102,7 @@ if (scr_Combinable(orbA, orbB, "Ash", "Wind")) {
 if (scr_Combinable(orbA, orbB, "Metal", "Energy")) {
 	if (ds_list_find_index(obj_Player.Backdrops, "Dam") == -1) {
 		ds_list_add(obj_Player.Backdrops, "Dam")
-		scr_StartDialogue("Dam", "You block the flow of lava with a metal dam.")
+		scr_StartDialogue("Dam", "You blocked the flow of lava with a metal dam.")
 	} else {
 		scr_StartDialogue("Dam", "You already blocked the lava.")
 	}
@@ -113,7 +113,7 @@ if (scr_Combinable(orbA, orbB, "Metal", "Energy")) {
 if (scr_Combinable(orbA, orbB, "Bricks", "Glass")) {
 	if (ds_list_find_index(obj_Player.Backdrops, "Bridge") == -1) {
 		ds_list_add(obj_Player.Backdrops, "Bridge")
-		scr_StartDialogue("Bridge", "You build a bridge with bricks, clay, and glass.")
+		scr_StartDialogue("Bridge", "You built a bridge with bricks, clay, and glass.")
 	} else {
 		scr_StartDialogue("Bridge", "You already built the bridge.")
 	}
